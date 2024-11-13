@@ -1,0 +1,22 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta Añadida Correctamente</title>
+    <link rel="stylesheet" href="{% static 'polls/css/success.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Encuesta añadida correctamente {{ question_text }}!</h1>
+        <a href="{% url 'polls:index' %}">
+            <button type="button">Ir a las encuestas</button>
+        </a>
+        <a href="{% url 'polls:question' %}">
+            <button type="button">Agregar otra encuesta</button>
+        </a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear una nueva encuesta</title>
+    <link rel="stylesheet" href="{% static 'polls/css/question_forms.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Crear una nueva encuesta</h1>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Añadir</button>
+        </form>
+        <a href="{% url 'polls:index' %}">
+            <button type="button">Regresar a las encuestas</button>
+        </a>
+    </div>
+</body>
+</html>
