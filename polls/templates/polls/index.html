@@ -1,0 +1,26 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Encuestas</title>
+    <link rel="stylesheet" href="{% static 'polls/css/styles.css' %}">
+</head>
+<body>
+
+<div class="container">
+    <h1>Encuestas Disponibles</h1>
+    {% if latest_question_list %}
+        <ul class="question-list">
+        {% for question in latest_question_list %}
+            <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p class="no-polls">No hay encuestas disponibles.</p>
+    {% endif %}
+</div>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centramos el contenido dentro del contenedor */
+}
+
+h1 {
+    color: #333333;
+    margin-bottom: 20px;
+    font-size: 1.8em; /* Ajuste de tamaño del título */
+}
+
+ul.question-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.question-list li {
+    margin: 15px 0;
+}
+
+.question-list a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: #007BFF;
+    font-weight: bold;
+    font-size: 1.2em; /* Aumenta el tamaño de las preguntas */
+    padding: 12px;
+    display: block;
+    background: #f0f8ff;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.question-list a:hover {
+    background-color: #007BFF;
+    color: #ffffff;
+}
+
+.no-polls {
+    color: #666666;
+    font-style: italic;
+    padding: 20px;
+}
